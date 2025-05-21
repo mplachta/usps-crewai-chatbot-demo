@@ -70,11 +70,9 @@ st.set_page_config(
     layout="wide"
 )
 
-st.logo("https://cdn.prod.website-files.com/66cf2bfc3ed15b02da0ca770/66d07240057721394308addd_Logo%20(1).svg", link="https://www.crewai.com/", size="large")
-
 st.logo("https://www.usps.com/global-elements/header/images/utility-header/logo-sb.svg", link="https://www.usps.com/", size="large")
 
-st.sidebar.title("CrewAI Conversational Agents Demo")
+st.sidebar.title("Postal Explorer CrewAI Conversational Agents Demo")
 
 st.sidebar.markdown("""
 This demo showcases the power of CrewAI's conversational agents. 
