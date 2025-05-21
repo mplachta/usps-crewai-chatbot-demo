@@ -65,31 +65,26 @@ def submit_message(message):
 # render page
 
 st.set_page_config(
-    page_title="CrewAI Conversational Agents Demo",
+    page_title="Postal Explorer Conversational Agents Demo",
     page_icon="💬",
     layout="wide"
 )
 
 st.logo("https://cdn.prod.website-files.com/66cf2bfc3ed15b02da0ca770/66d07240057721394308addd_Logo%20(1).svg", link="https://www.crewai.com/", size="large")
 
+st.logo("https://www.usps.com/global-elements/header/images/utility-header/logo-sb.svg", link="https://www.usps.com/", size="large")
+
 st.sidebar.title("CrewAI Conversational Agents Demo")
 
 st.sidebar.markdown("""
 This demo showcases the power of CrewAI's conversational agents. 
 Experience AI-driven conversations that adapt to your inputs and 
-provide intelligent responses. Try asking questions or discussing 
-various topics to see how the agents interact and collaborate.
+provide intelligent responses.
+
+This crew can answer questions related to [Postal Explorer](https://pe.usps.com/text/dmm300/Notice123.htm)
 
 Get started by typing a message in the chat input below!
-
-The Crew that is answering the questions is called "CrewAI Expert".
-It can answer questions about the CrewAI framework, provide concise and 
-accurate information, and guide you in its effective use. It is using RAG 
-(Retrieval-Augmented Generation) configured with our 
-[Knowledge](https://docs.crewai.com/concepts/knowledge).
 """)
-
-st.sidebar.link_button("Open a CrewAI platform account", "https://app.crewai.com/", type="primary")
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"], avatar=(crew_favicon if message["role"] == "crewai" else None)):
